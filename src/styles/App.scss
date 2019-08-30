@@ -1,0 +1,30 @@
+@import 'normalize';
+@import 'reset';
+@import 'variables';
+@import 'mixins';
+@import '../components/Preloader/styles/preloader';
+@import '../components/Header/styles/header';
+@import '../components/ChatList/styles/chatList';
+@import '../components/Footer/styles/footer';
+
+html,
+body,
+#root,
+.App {
+    height: 100%;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.chat-wrap {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.main {
+    flex: 1 0 auto;
+}

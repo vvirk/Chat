@@ -1,2 +1,2 @@
-export const ADD_COUNTRIES = 'ADD_COUNTRIES';
+export const ADD_MESSAGES = 'ADD_MESSAGES';
 export const TOGGLE_IS_FETSHING = 'TOGGLE_IS_FETSHING';

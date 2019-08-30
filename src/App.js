@@ -1,6 +1,6 @@
 import React from 'react';
 import { ChatContainer } from './containers/ChatContainer';
-import './App.scss';
+import './styles/App.scss';
 
 function App() {
   return (

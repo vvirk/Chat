@@ -1,8 +1,8 @@
 import * as type from '../actions/actionTypes';
 
-export const addCountries = countries => ({
-  type: type.ADD_COUNTRIES,
-  countries,
+export const addMessages = messages => ({
+  type: type.ADD_MESSAGES,
+  messages,
 });
 
 export const toggleIsFetching = isFetching => ({
@@ -10,11 +10,11 @@ export const toggleIsFetching = isFetching => ({
   isFetching,
 });
   
-export const getCountries = () => async (dispatch) => {
+export const getMessages = () => async (dispatch) => {
   try {
-    const url = 'http://0.0.0.0:3002/countries';
+    const url = 'https://api.dev.buki.com.ua/frontend_test';
     const response = await fetch(url);
     const responseBody = await response.json();
-    dispatch(addCountries(responseBody));
+    dispatch(addMessages(responseBody));
  } catch(e) {console.log(e)}
 };

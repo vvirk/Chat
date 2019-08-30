@@ -1,0 +1,2 @@
+export const ADD_COUNTRIES = 'ADD_COUNTRIES';
+export const TOGGLE_IS_FETSHING = 'TOGGLE_IS_FETSHING';

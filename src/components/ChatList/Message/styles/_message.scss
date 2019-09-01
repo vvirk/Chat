@@ -1,0 +1,34 @@
+.message {
+    max-width: 730px;
+    display: flex;
+    flex-direction: column;
+    background: $gray;
+    &-wrap {
+      width: 100%;
+      display: flex;
+    }
+    &-time {
+      width: 100%;
+      text-align: right;
+    }
+    &-inner {
+        display: flex;
+    }
+    &-like-wrap {
+      display: flex;
+      align-items: flex-end;
+    }
+}
+
+.my-message {
+  background: $gark-gray;
+  &-wrap {
+    justify-content: flex-end;
+  }
+}
+.avatar {
+    max-width: 79px;
+    img {
+        width: 100%;
+    }
+}

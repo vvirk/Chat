@@ -18,3 +18,13 @@ export const getMessages = () => async (dispatch) => {
     dispatch(addMessages(responseBody));
  } catch(e) {console.log(e)}
 };
+
+export const addNewMessage = message => ({
+  type: type.ADD_NEW_MESSAGE,
+  message,
+});
+
+export const addUserName = userName => ({
+  type: type.ADD_USER_NAME,
+  userName,
+})

@@ -1,11 +1,11 @@
 import React from 'react';
-import { ChatContainer } from './containers/ChatContainer';
+import MainRouter from './routes';
 import './styles/App.scss';
 
 function App() {
   return (
     <div className="App">
-      <ChatContainer />
+      <MainRouter />
     </div>
   );
 }

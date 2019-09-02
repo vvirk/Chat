@@ -16,6 +16,7 @@ export const getMessages = () => async (dispatch) => {
     const response = await fetch(url);
     const responseBody = await response.json();
     dispatch(addMessages(responseBody));
+    dispatch(toggleIsFetching(false));
  } catch(e) {console.log(e)}
 };
 

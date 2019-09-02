@@ -3,6 +3,7 @@
 @import 'variables';
 @import 'mixins';
 @import '../components/Preloader/styles/preloader';
+@import '../components/Login/styles/login';
 @import '../components/Header/styles/header';
 @import '../components/ChatList/styles/chatList';
 @import '../components/ChatList/Message/styles/message';
@@ -29,4 +30,20 @@ a {
 
 .main {
     flex: 1 0 auto;
+}
+
+.content {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 25px;
+}
+.display-none {
+    display: none;
+}
+
+@media (max-width: 420px) {
+    .content {
+        padding: 0 15px;
+    }
 }

@@ -9,13 +9,13 @@ export const Login = (props) => {
       <div className="login-inner">
         <input 
           type="text"
-          className="user-name-input"
+          className="user-name-input message-input"
           onChange={(e) => setUserName(e.target.value)}
           placeholder="Please, enter your name"
         />
         <Link
           to={userName ? "/chat" : "#"}
-          className="login-btn"
+          className="login-btn message-input-btn"
           onClick={()=>props.addUserName(userName)}
         >
          Login

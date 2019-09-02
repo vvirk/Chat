@@ -8,14 +8,16 @@ export const Message = (props) => {
           {props.createdTime}
         </div>
         <div className="message-inner">
-          <div className="avatar">
-            <img src={props.avatar} alt="avatar" />
+          <div className="message-info">
+            <div className="avatar">
+              <img src={props.avatar} alt="avatar" />
+            </div>
+            <div className="message-desc">
+              <h2 className="message-title">{props.name}</h2>
+              <div className="message-body">{props.message}</div>
+            </div>
           </div>
-          <div className="message-desc">
-            <div className="user-name">{props.name}</div>
-            <div className="message-body">{props.message}</div>
-          </div>
-          <div className="message-like-wrap">
+          <div className={props.classLikeWrap}>
             <button className="message-like">&#10084;</button>
           </div>
         </div>

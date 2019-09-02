@@ -1,4 +1,5 @@
 import * as type from '../actions/actionTypes';
+import * as moment from 'moment';
 
 export const initialState = {
   messages: false,
@@ -20,7 +21,7 @@ export const reducer = (state = initialState, action) => {
         message: action.message,
         user: state.userName,
         id: +[state.messages[lastMesage].id] + 1,
-        created_at: 'now',
+        created_at: moment().format("YYYY-MM-D HH:mm:ss"),
       }]};
     default:
       return state;

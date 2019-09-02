@@ -13,10 +13,12 @@ export const ChatList = (props) => {
           ? <ul className="messages-list">
               {messages.map(message => (
                 <Message
-                  classWrap={(message.user === "Taylor") 
+                  classWrap={(message.user === props.userName) 
                     ? "message-wrap my-message-wrap" : "message-wrap"}
-                  classMessage={(message.user === "Taylor") 
+                  classMessage={(message.user === props.userName) 
                     ? "message my-message" : "message"}
+                  classLikeWrap={(message.user === props.userName) 
+                    ? "display-none" : "message-like-wrap"}
                   key={message.id}
                   avatar={message.avatar 
                     ? message.avatar : avatar}

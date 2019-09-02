@@ -1,12 +1,13 @@
 import React from 'react';
 import Preloader from '../Preloader/Preloader';
-import Header from '../Header/Header';
+import HeaderContainer from '../../containers/HeaderContainer';
 import ChatListContainer from '../../containers/ChatListContainer';
 import MessageInputContainer from '../../containers/MessageInputContainer';
 import Footer from '../Footer/Footer';
 
 export class Chat extends React.Component {
   componentDidMount() {
+    this.props.toggleIsFetching(true);
     this.props.getMessages();
   }
   render() {
@@ -15,7 +16,7 @@ export class Chat extends React.Component {
       <div className="chat-wrap">
         {(this.props.isFetching) ? <Preloader /> : null}
         <main className="main">
-          <Header />
+          <HeaderContainer />
           <ChatListContainer />
           <MessageInputContainer />
         </main>

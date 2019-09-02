@@ -8,11 +8,14 @@ export const MessageInput = (props) => {
         <input 
           className="message-input"
           type="text" 
-          onChange={(e) => setMessage(e.target.value)} 
+          onChange={(e) => setMessage(e.target.value)}
+          value={message} 
+          placeholder="Type something..."
         />
         <button 
           className="message-input-btn" 
-          onClick={()=>props.addNewMessage(message)}
+          onClick={()=>(message) 
+            ? props.addNewMessage(message) && setMessage("") : null}
         >
           send
         </button>

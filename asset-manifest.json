@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/chat/static/css/main.63430899.chunk.css",
-    "main.js": "/chat/static/js/main.b5398831.chunk.js",
-    "main.js.map": "/chat/static/js/main.b5398831.chunk.js.map",
+    "main.js": "/chat/static/js/main.23e1cadf.chunk.js",
+    "main.js.map": "/chat/static/js/main.23e1cadf.chunk.js.map",
     "runtime~main.js": "/chat/static/js/runtime~main.eff7a0c2.js",
     "runtime~main.js.map": "/chat/static/js/runtime~main.eff7a0c2.js.map",
     "static/js/2.3d7f4cff.chunk.js": "/chat/static/js/2.3d7f4cff.chunk.js",
     "static/js/2.3d7f4cff.chunk.js.map": "/chat/static/js/2.3d7f4cff.chunk.js.map",
     "index.html": "/chat/index.html",
-    "precache-manifest.651707cc4300c6608021af1ef5922609.js": "/chat/precache-manifest.651707cc4300c6608021af1ef5922609.js",
+    "precache-manifest.a6a291a729ba569393a3f06447beec21.js": "/chat/precache-manifest.a6a291a729ba569393a3f06447beec21.js",
     "service-worker.js": "/chat/service-worker.js",
     "static/css/main.63430899.chunk.css.map": "/chat/static/css/main.63430899.chunk.css.map",
     "static/media/Spinner.svg": "/chat/static/media/Spinner.315ddeed.svg",

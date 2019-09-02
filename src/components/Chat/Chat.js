@@ -7,14 +7,13 @@ import Footer from '../Footer/Footer';
 
 export class Chat extends React.Component {
   componentDidMount() {
-    this.props.toggleIsFetching(true);
     this.props.getMessages();
   }
   render() {
-    console.log(this.props);
+    const { isFetching } = this.props;
     return (
       <div className="chat-wrap">
-        {(this.props.isFetching) ? <Preloader /> : null}
+        {isFetching ? <Preloader /> : null}
         <main className="main">
           <HeaderContainer />
           <ChatListContainer />

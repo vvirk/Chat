@@ -3,8 +3,7 @@ import Message from './Message/Message';
 //images
 import avatar from './Message/images/avatar.png';
 
-export const ChatList = (props) => {
-  console.log(props.messages.length);
+export const ChatList = props => {
   const { messages } = props;
   return (
     <section className="chat-list">
@@ -19,6 +18,8 @@ export const ChatList = (props) => {
                     ? "message my-message" : "message"}
                   classLikeWrap={(message.user === props.userName) 
                     ? "display-none" : "message-like-wrap"}
+                  classAvatar={(message.user === props.userName) 
+                    ? "display-none" : "avatar"}
                   key={message.id}
                   avatar={message.avatar 
                     ? message.avatar : avatar}
@@ -28,7 +29,6 @@ export const ChatList = (props) => {
                 />
             ))}
             </ul> : null}
-            <p>{props.newMessage}</p>
       </div>
     </section>
   );

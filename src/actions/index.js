@@ -10,8 +10,9 @@ export const toggleIsFetching = isFetching => ({
   isFetching,
 });
   
-export const getMessages = () => async (dispatch) => {
+export const getMessages = () => async dispatch => {
   try {
+    dispatch(toggleIsFetching(true));
     const url = 'https://api.dev.buki.com.ua/frontend_test';
     const response = await fetch(url);
     const responseBody = await response.json();

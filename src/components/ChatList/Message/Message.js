@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const Message = (props) => {
+export const Message = props => {
   return (
     <li className={props.classWrap}>
       <div className={props.classMessage}>
@@ -9,7 +9,7 @@ export const Message = (props) => {
         </div>
         <div className="message-inner">
           <div className="message-info">
-            <div className="avatar">
+            <div className={props.classAvatar}>
               <img src={props.avatar} alt="avatar" />
             </div>
             <div className="message-desc">

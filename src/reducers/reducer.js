@@ -6,6 +6,7 @@ export const initialState = {
   isFetching: false,
   newMessage: "",
   userName: false,
+  likeMessages: [],
 };
 export const reducer = (state = initialState, action) => {
   switch (action.type) {
@@ -23,7 +24,15 @@ export const reducer = (state = initialState, action) => {
         id: +[state.messages[lastMesage].id] + 1,
         created_at: moment().format("YYYY-MM-D HH:mm:ss"),
       }]};
-    default:
+    case type.TOGGLE_LIKE:
+      if(state.likeMessages.includes(action.id)) {
+        const index = state.likeMessages.indexOf(action.id);
+        return { ...state, likeMessages: 
+          [ ...state.likeMessages.slice(0, index), 
+            ...state.likeMessages.slice(index + 1)]}
+      } 
+      return { ...state, likeMessages: [...state.likeMessages, action.id] };
+      default:
       return state;
   }
 };

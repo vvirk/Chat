@@ -1,0 +1,71 @@
+@import '../../../styles/variables';
+
+.wrap {
+    width: 100%;
+    padding-bottom: 15px;
+    background: #000;
+}
+
+.inner {
+    display: flex;
+    flex-direction: column;
+}
+
+.nav {
+    width: 100%;
+    margin: 23px 0;
+    display: flex;
+    justify-content: center;
+    &Link {
+        margin-right: 85px;
+        color: #fff;
+        font-family: Arial;
+        font-weight: 700;
+        font-size: 24px;
+        &:last-child {
+            margin-right: 0;
+        }
+        &:hover {
+            color: $green;
+            transition: .5s;
+        }
+    }
+}
+
+.copyright {
+    color: #fff;
+    font-family: Arial;
+    font-size: 18px;
+    text-align: center;
+}
+
+@media (max-width: 920px) {
+    .nav {
+        margin: 15px 0;
+        &Link {
+            font-size: 20px;
+            margin-right: 40px;
+        }
+    }
+    .copyright {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 560px) {
+    .nav-link {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 420px) {
+    .nav {
+        margin: 10px 0;
+        &Link {
+            font-size: 14px;
+        }
+    }
+    .copyright {
+        font-size: 12px;
+    }
+}

@@ -1,2 +1,2 @@
 # Chat
-[Chat](https://vvirk.github.io/сhat)
+[Chat](https://vvirk.github.io/chat/)

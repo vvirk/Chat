@@ -29,4 +29,9 @@ export const addNewMessage = message => ({
 export const addUserName = userName => ({
   type: type.ADD_USER_NAME,
   userName,
-})
+});
+
+export const toggleLike = id => ({
+  type: type.TOGGLE_LIKE,
+  id,
+});

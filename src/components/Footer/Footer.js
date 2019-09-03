@@ -1,16 +1,17 @@
 import React from 'react';
- 
+import s from './styles/Footer.module.scss'
+
 export const Footer = () => {
   return (
-    <footer className="footer">
+    <footer className={s.wrap}>
       <div className="content">
-        <div className="footer-inner">
-          <nav className="footer-nav">
-            <a className="footer-nav-link" href="#">Home</a>
-            <a className="footer-nav-link" href="#">About</a>
-            <a className="footer-nav-link" href="#">Contact us</a>
+        <div className={s.inner}>
+          <nav className={s.nav}>
+            <a className={s.navLink} href="#">Home</a>
+            <a className={s.navLink} href="#">About</a>
+            <a className={s.navLink} href="#">Contact us</a>
           </nav>
-          <div className="copyright">@ Copyright 2019</div>
+          <div className={s.copyright}>@ Copyright 2019</div>
         </div>
       </div>
     </footer>);

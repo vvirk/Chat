@@ -1,21 +1,24 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
+//styles
+import s from './styles/Login.module.scss';
+
 export const Login = props => {
   const [userName, setUserName] = useState("");
   const { addUserName } = props;
   return (
-    <div className="login-wrap">
-      <div className="login-inner">
+    <div className={s.wrap}>
+      <div className={s.inner}>
         <input 
           type="text"
-          className="user-name-input message-input"
+          className={s.input}
           onChange={e => setUserName(e.target.value)}
           placeholder="Please, enter your name"
         />
         <Link
           to={userName ? "/chat" : "#"}
-          className="login-btn message-input-btn"
+          className={s.btn}
           onClick={()=>addUserName(userName)}
         >
          Login

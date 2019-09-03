@@ -1,0 +1,66 @@
+@import '../../../styles/variables';
+
+.inner {
+    padding: 18px 0;
+    display: flex;
+    align-items: center;
+}
+
+.wrap {
+    width: 100%;
+    background: #000;
+}
+
+.logo {
+    margin-right: 35px;
+    color: $green;
+    font-family: Arial;
+    font-size: 30px;
+    font-weight: 700;
+}
+.chatInfo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-grow: 1;
+    &NumberOf {
+        color: #fff;
+        font-family: Arial;
+        font-weight: 700;
+        font-size: 18px;
+    }
+    &LastMessage {
+        color: $gray;
+        font-family: Arial;
+        font-size: 18px;
+    }
+}
+@media (max-width: 720px) {
+    .logo {
+        margin-right: 25px;
+        font-size: 24px;
+    }
+    .chatInfoNumberOf,
+    .chatInfoLastMessage {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 560px) {
+    .chatInfo {
+        flex-direction: column;
+        align-items: flex-end;
+    }
+}
+
+@media (max-width: 420px) {
+    .logo {
+        margin-right: 0;
+        font-size: 20px;
+    }
+    
+    .chatInfoNumberOf,
+    .chatInfoLastMessage {
+        font-size: 12px;
+    }
+}

@@ -9,6 +9,7 @@ import s from './Message/styles/Message.module.scss';
 
 export const ChatList = props => {
   const { messages } = props;
+  console.log(messages);
   return (
     <section className="chat-list">
       <div className="content">
@@ -24,6 +25,8 @@ export const ChatList = props => {
                     ? "display-none" : s.messageLikeWrap}
                   classAvatar={(message.user === props.userName) 
                     ? "display-none" : s.avatar}
+                  classNav={(message.user === props.userName) 
+                    ? s.nav : "display-none"}
                   key={message.id}
                   id={message.id}
                   avatar={message.avatar 

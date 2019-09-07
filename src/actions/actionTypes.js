@@ -1,5 +1,10 @@
 export const ADD_MESSAGES = 'ADD_MESSAGES';
+export const ADD_MESSAGE = 'ADD_MESSAGE';
 export const TOGGLE_IS_FETSHING = 'TOGGLE_IS_FETSHING';
-export const ADD_NEW_MESSAGE = 'ADD_NEW_MESSAGE';
+export const SEND_MESSAGE = 'SEND_MESSAGE';
 export const ADD_USER_NAME = 'ADD_USER_NAME';
 export const TOGGLE_LIKE = 'TOGGLE_LIKE';
+export const DELETE_MESSAGE = 'DELETE_MESSAGE';
+export const CHANGE_MESSAGE = 'CHANGE_MESSAGE';
+export const SAVE_EDITED_MESSAGE = 'SAVE_EDITED_MESSAGE';
+export const ADD_EDIT_ID = 'ADD_EDIT_ID';

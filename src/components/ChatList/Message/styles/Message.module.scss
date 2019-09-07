@@ -48,12 +48,9 @@
   font-size: 18px;
 }
 .messageLike {
-  height: 26px;
-  border: none;
-  outline: none;
-  background: transparent;
   color: $text-gray;
   font-size: 31px;
+  cursor: pointer;
   &Wrap {
     display: flex;
     align-items: flex-end;
@@ -77,6 +74,27 @@
     }
 }
 
+.nav {
+  display: flex;
+  align-items: flex-end;
+  color: $text-gray;
+}
+
+.deleteBtn {
+  color: $text-gray;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.editBtn {
+  margin-right: 15px;
+  font-size: 16px;
+  font-family: Arial;
+  cursor: pointer;
+  &:hover {
+    text-decoration: underline;
+  }
+}
 @media (max-width: 560px) {
   .time {
     font-size: 14px;
@@ -88,7 +106,8 @@
     margin: 10px 0;
     font-size: 16px;
   }
-  .messageLike {
+  .messageLike,
+  .deleteBtn {
     height: 20px;
     font-size: 24px;
   }

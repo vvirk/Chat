@@ -1,12 +1,21 @@
 import { connect } from 'react-redux';
 import MessageInput from '../components/MessageInput/MessageInput';
-import { addNewMessage } from '../actions/index';
+import { 
+  addMessage,
+  sendMessage,
+  saveEditedMessage,
+} from '../actions/index';
 
 const mapStateToProps = state => ({
-  messages: state.messages,
+  message: state.message,
+  editId: state.editId,
+  editIndex: state.editIndex,
+  f: state.f,
 });
 const mapDispatchToProps = {
-  addNewMessage,
+  addMessage,
+  sendMessage,
+  saveEditedMessage,
 };
 export const MessageInputContainer = connect(
   mapStateToProps,

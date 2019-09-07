@@ -4,9 +4,12 @@ import React from 'react';
 import s from './styles/Message.module.scss';
 
 export const Message = props => {
-  const { toggleLike } = props;
-  const { likeMessages } = props;
-
+  const { 
+    toggleLike, 
+    likeMessages, 
+    deleteMessage,
+    changeMessage,
+  } = props;
   return (
     <li className={props.classWrap}>
       <div className={props.classMessage}>
@@ -24,15 +27,33 @@ export const Message = props => {
             </div>
           </div>
           <div className={props.classLikeWrap}>
-            <button 
+            <div 
               className={(likeMessages.includes(props.id)) 
                 ? `${s.messageLike} ${s.like}` : s.messageLike }
               onClick={(e)=> toggleLike(e.target.id)}
               id={props.id}
             >
               &#9829;
-            </button>
+            </div>
           </div>
+          <nav className={props.classNav}>
+            <div 
+             className={s.editBtn}
+             id={props.id}
+             title="edit message"
+             onClick={(e)=> changeMessage(e.target.id)}
+            >
+              edit
+            </div>
+            <div 
+              id={props.id}
+              onClick={(e)=>deleteMessage(e.target.id)}
+              className={s.deleteBtn}
+              title="delete message"
+            >
+              &#10799;
+            </div>
+          </nav>
         </div>
       </div>
     </li>

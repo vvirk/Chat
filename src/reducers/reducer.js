@@ -40,15 +40,11 @@ export const reducer = (state = initialState, action) => {
           ? state.messages[index].message : "";
       return { ...state, editId: action.id, message: editValue, editIndex: index, };
     case type.SAVE_EDITED_MESSAGE:
+      const messagesCopy = [...state.messages];
+      messagesCopy[action.index].message = action.message;
       return { 
         ...state, 
-          messages: [
-            ...state.messages, 
-            [action.index], {
-                ...state.messages[action.index],
-                message: action.message 
-              }
-            ], 
+          messages: [...messagesCopy], 
           message: "",
           editId: false, 
           editIndex: false,

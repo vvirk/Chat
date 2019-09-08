@@ -9,6 +9,7 @@ import {
 const mapStateToProps = state => ({
   isFetching: state.isFetching,
   messages: state.messages,
+  userName: state.userName,
 });
 const mapDispatchToProps = {
   getMessages,

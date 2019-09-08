@@ -23,12 +23,16 @@ export const reducer = (state = initialState, action) => {
       return { ...state, message: action.message };
     case type.SEND_MESSAGE:
       const lastMesage = state.messages.length - 1;
-      return { ...state, messages: [ ...state.messages,  {
-        id: +[state.messages[lastMesage].id] + 1,
-        user: state.userName,
-        created_at: moment().format("YYYY-MM-D HH:mm:ss"),
-        message: action.message,
-      }], message: ""};
+      return { 
+        ...state, 
+          messages: [ ...state.messages,  {
+            id: +[state.messages[lastMesage].id] + 1,
+            user: state.userName,
+            created_at: moment().format("YYYY-MM-D HH:mm:ss"),
+            message: action.message,
+          }], 
+          message: ""
+        };
     case type.CHANGE_MESSAGE:
         let index;
         for (let i = 0; i < state.messages.length; i++) {
@@ -38,7 +42,12 @@ export const reducer = (state = initialState, action) => {
         }
         const editValue = (state.messages[index]) 
           ? state.messages[index].message : "";
-      return { ...state, editId: action.id, message: editValue, editIndex: index, };
+      return { 
+        ...state, 
+          editId: action.id, 
+          message: editValue, 
+          editIndex: index, 
+        };
     case type.SAVE_EDITED_MESSAGE:
       const messagesCopy = [...state.messages];
       messagesCopy[action.index].message = action.message;

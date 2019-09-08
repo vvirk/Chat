@@ -13,8 +13,7 @@ export const MessageInput = props => {
     saveEditedMessage,
     editIndex,
   } = props;
-  console.log(editId);
-  console.log(editIndex);
+
   return (
     <div className={s.wrap}>
       <div className={s.content}>

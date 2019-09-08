@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import MessageContainer from '../../containers/MessageContainer';
 
 //images
@@ -9,7 +9,11 @@ import s from './Message/styles/Message.module.scss';
 
 export const ChatList = props => {
   const { messages } = props;
-  console.log(messages);
+  const messagesEndRef = useRef(null);
+  const scrollToBottom = () => {
+    messagesEndRef.current.scrollIntoView({ behavior: "smooth" });
+  };
+  useEffect(scrollToBottom, [messages]);
   return (
     <section className="chat-list">
       <div className="content">
@@ -37,6 +41,7 @@ export const ChatList = props => {
                 />
             ))}
             </ul> : null}
+            <div ref={messagesEndRef} />
       </div>
     </section>
   );

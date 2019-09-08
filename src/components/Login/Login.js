@@ -17,7 +17,7 @@ export const Login = props => {
           placeholder="Please, enter your name"
         />
         <Link
-          to={userName ? "/chat" : "#"}
+          to={"/"}
           className={s.btn}
           onClick={()=>addUserName(userName)}
         >

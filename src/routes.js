@@ -5,8 +5,8 @@ import ChatContainer from './containers/ChatContainer';
 
 export const MainRouter = () => (
   <Router>
-    <Route path="/" exact component={LoginContainer} />
-    <Route path="/chat" exact component={ChatContainer} />     
+    <Route path="/" exact component={ChatContainer} />     
+    <Route path="/login" exact component={LoginContainer} />
   </Router>  
 );
 

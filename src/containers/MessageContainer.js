@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import Message from '../components/ChatList/Message/Message';
+import Message from '../components//Message/Message';
 import { 
   toggleLike,
   deleteMessage,

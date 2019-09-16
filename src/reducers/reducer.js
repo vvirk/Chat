@@ -53,7 +53,7 @@ export const reducer = (state = initialState, action) => {
       messagesCopy[action.index].message = action.message;
       return { 
         ...state, 
-          messages: [...messagesCopy], 
+          messages: messagesCopy, 
           message: "",
           editId: false, 
           editIndex: false,

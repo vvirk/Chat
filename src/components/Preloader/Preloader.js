@@ -1,6 +1,8 @@
 import React from 'react';
+
 // styles
 import s from './styles/Preloader.module.scss';
+
 // images
 import Spinner from './images/Spinner.svg';
 

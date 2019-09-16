@@ -2,10 +2,10 @@ import React, { useEffect, useRef } from 'react';
 import MessageContainer from '../../containers/MessageContainer';
 
 //images
-import avatar from './Message/images/avatar.png';
+import avatar from '../Message/images/avatar.png';
 
 //styles
-import s from './Message/styles/Message.module.scss';
+import s from '../Message/styles/Message.module.scss';
 
 export const ChatList = props => {
   const { messages } = props;
@@ -15,7 +15,7 @@ export const ChatList = props => {
   };
   useEffect(scrollToBottom, [messages]);
   return (
-    <section className="chat-list">
+    <section className="chatList">
       <div className="content">
         {(messages) 
           ? <ul className="messages-list">
